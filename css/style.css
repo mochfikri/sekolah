@@ -1,6 +1,3 @@
-/* body {
-  margin-bottom: 200px;
-} */
 * {
   margin: 0;
   padding: 0;
@@ -121,9 +118,6 @@ img {
 }
 
 /* WELCOME */
-/* #welcome {
-  margin-top: 200px;
-} */
 #welcome .container {
   min-height: 200px;
 }
@@ -258,6 +252,23 @@ img {
   box-sizing: border-box;
   min-height: 300px;
 }
+
+.intro-left {
+  opacity: 0;
+  transform: translate(-50px,0) rotate(15deg);
+  transition: 1s;
+}
+.intro-right {
+  opacity: 0;
+  transform: translate(300px,0) rotate(0);
+  transition: 1s;
+  transition-delay: .3s;
+}
+.intro-show {
+  opacity: 1;
+  transform: translate(0) rotate(0);
+}
+
 .intro-left h1 span {
   color: #4356ea;
 }
@@ -329,6 +340,13 @@ img {
   width: 32%;
   box-sizing: border-box;
   min-height: 130px;
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(-15px);
+}
+.service-show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .service-wrap {
   display: table-row;
@@ -362,6 +380,9 @@ img {
   min-height: 0;
 }
 
+.slide {
+  box-sizing: border-box;
+}
 .slide-img {
   position: absolute;
   float: left;
@@ -399,7 +420,7 @@ img {
   font-style: italic;
 }
 .slider{
-	overflow: hidden;
+  overflow: hidden;
 }
 .slider figure{
   position: relative;
@@ -410,8 +431,8 @@ img {
   animation: 50s slidy infinite;
 }
 .slider figure .slide{
-	width: 20%;
-	float: left;
+  width: 20%;
+  float: left;
 }
 
 /* NEWS AND UPDATE */
@@ -446,6 +467,17 @@ img {
   width: 30%;
   min-height: 425px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: .5s;
+  transform: translateX(-15px);
+}
+.news-box:last-child {
+  transform: translateX(50px);
+}
+.news-show,
+.news-show:last-child {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .news-img {
@@ -501,6 +533,7 @@ img {
 .vertical-news {
   margin-bottom: 10px;
 }
+
 .mini-img {
   width: 40%;
   float: left;
@@ -566,6 +599,13 @@ img {
   margin-bottom: 30px;
   box-sizing: border-box;
   background-color: #fafafa;
+  opacity: 0;
+  transform: scale(.95);
+  transition: .3s;
+}
+.alumni-show {
+  opacity: 1;
+  transform: scale(1);
 }
 .alumni-box:nth-child(1),
 .alumni-box:nth-child(2) {
@@ -608,6 +648,13 @@ img {
 .teacher-box {
   width: 30%;
   min-height: 300px;
+  opacity: 0;
+  transform: translate(0,50px);
+  transition: .3s;
+}
+.teacher-show {
+  opacity: 1;
+  transform: translate(0);
 }
 .teacher-box:hover .teacher-detail {
   opacity: 1;
@@ -655,6 +702,7 @@ img {
   transition: all 250ms linear;
   padding: 10px 40px;
   z-index: 2;
+  box-sizing: border-box;
 }
 #msg .btn-view span {
   position: absolute;
@@ -832,7 +880,6 @@ img {
   .header .menu-mobile li {
     padding: 20px;
     text-transform: uppercase;
-    /* float: left; */
   }
 
   .header .menu-mobile .active a {
@@ -876,12 +923,15 @@ img {
   }
 
   /* JUMBOTRON */
-  .jumbotron {
-    min-height: 60vh;
-  }
   .welcome {
     width: 100%;
-    height: 48%;
+    height: 25%;
+  }
+  #welcome h1 {
+    font-size: 25px;
+  }
+  #welcome p {
+    font-size: 14px;
   }
 
   /* INFORMATION */
@@ -894,6 +944,12 @@ img {
   }
   .intro-left .description {
     width: 100%;
+  }
+  .intro-left {
+    transform: translate(0,-50px) rotate(0);
+  }
+  .intro-show {
+    transform: translate(0) rotate(0);
   }
 
   /* SERVICE */
@@ -912,6 +968,36 @@ img {
   .service-box:nth-child(3) .service-text {
     width: 90%;
   }
+
+
+
+  /* MOTIVASI */
+  #motivasi {
+    padding: 50px 0;
+  }
+
+  .slide  {
+    padding: 0 30px;
+  }
+  .slide-img {
+    width: 100px;
+  }
+  .slide-text {
+    margin-left: 130px;
+  }
+
+  .slide-text p {
+    font-size: 16px;
+  }
+
+  .slide-say h3 {
+    font-size: 15px;
+  }
+  .slide-say p {
+    font-size: 14px;
+  }
+
+
 
   /* ALUMNI */
   .alumni-items {
@@ -939,6 +1025,15 @@ img {
   }
   .news-box:nth-child(3) {
     display: none;
+  }
+  .titleNews h1 {
+    font-size: 25px;
+  }
+  .divider {
+    margin: 20px 0 40px 0;
+  }
+  .long-line {
+    width: 200px;
   }
 
   /* TEACHERS */
@@ -973,6 +1068,18 @@ img {
     width: 90%;
   }
 
+  /* WELLCOME */
+  .welcome {
+    height: 20%;
+  }
+  #welcome h1 {
+    font-size: 20px;
+    margin: 25px 0;
+  }
+  #welcome p {
+    font-size: 12px;
+  }
+
   /* INFORMATION */
   .intro-box:nth-child(1) {
     padding: 0;
@@ -1002,27 +1109,40 @@ img {
 
   /* MOTIVASI */
   #motivasi {
-    padding: 50px 0;
+    padding: 30px 0;
   }
-
+  .slide {
+    padding: 0 10px;
+  }
   .slide-img {
     position: static;
     float: none;
-    width: 100%;
+    width: 80px;
+    margin: 0 auto;
   }
   .slide-text {
     text-align: justify;
     margin: 0;
     padding: 20px;
   }
+  .slide-text p {
+    font-size: 14px;
+  }
+
   .slide-say {
-    width: 160px;
+    width: 125px;
     margin: 0 auto;
     float: none;
   }
+  .slide-say h3 {
+    font-size: 13px;
+  }
+
   .slide-img p {
     display: none;
   }
+
+
 
   /* NEWS AND UPDATE */
   .news-box {
@@ -1038,26 +1158,36 @@ img {
     width: 100%;
   }
 
+  /* MESSAGE */
+  #msg .btn-view {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  #msg h1 {
+    font-size: 20px;
+  }
+
   /* FOOTER */
   .footer-box {
-    width: 32%;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer-box:last-child {
+    margin-bottom: 0;
   }
 
 }
 
 @media only screen and (max-width:500px) {
 
-  /* WELCOME */
-  .welcome {
-    height: 170px;
+  .nav-2:nth-child(1) {
+    width: 80%;
   }
-  #welcome h1 {
-    font-size: 35px;
-    margin: 20px 0;
+  .nav-2:nth-child(2) {
+    width: 20%;
   }
-  #welcome p {
-    font-size: 15px;
-  }
+
 
   /* INFORMATION */
   .intro-left h1 {
@@ -1109,75 +1239,75 @@ img {
 
 
 @keyframes slidy{
-	0%{
-		left: 0%
-	}
+  0%{
+    left: 0%
+  }
 
-	10%{
-		left: 0%;
-	}
+  10%{
+    left: 0%;
+  }
 
-	12%{
-		left: -100%;
-	}
+  12%{
+    left: -100%;
+  }
 
-	22%{
-		left: -100%;
-	}
+  22%{
+    left: -100%;
+  }
 
-	24%{
-		left: -200%;
-	}
+  24%{
+    left: -200%;
+  }
 
-	34%{
-		left: -200%;
-	}
+  34%{
+    left: -200%;
+  }
 
-	36%{
-		left: -300%;
-	}
+  36%{
+    left: -300%;
+  }
 
-	46%{
-		left: -300%;
-	}
+  46%{
+    left: -300%;
+  }
 
-	48%{
-		left: -400%;
-	}
+  48%{
+    left: -400%;
+  }
 
-	58%{
-		left: -400%;
-	}
+  58%{
+    left: -400%;
+  }
 
-	60%{
-		left: -300%;
-	}
+  60%{
+    left: -300%;
+  }
 
-	70%{
-		left: -300%;
-	}
+  70%{
+    left: -300%;
+  }
 
-	72%{
-		left: -200%;
-	}
+  72%{
+    left: -200%;
+  }
 
-	82%{
-		left: -200%;
-	}
+  82%{
+    left: -200%;
+  }
 
-	84%{
-		left: -100%;
-	}
+  84%{
+    left: -100%;
+  }
 
-	94%{
-		left: -100%;
-	}
+  94%{
+    left: -100%;
+  }
 
-	96%{
-		left: 0%;
-	}
+  96%{
+    left: 0%;
+  }
 
-	100%{
-		left: 0%;
-	}
+  100%{
+    left: 0%;
+  }
 }
