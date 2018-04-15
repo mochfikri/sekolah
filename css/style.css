@@ -761,7 +761,7 @@ img {
   color: #cccccc;
   padding: 25px 0;
   font-size: 12px;
-  border: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255,255,255,.1);
   background: linear-gradient(30deg,#22313f,#48425a);
 }
 #copyright .container {
